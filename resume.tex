@@ -1,87 +1,213 @@
-%______________________________________________________________________________________________________________________
-% @brief    LaTeX2e Resume for Daron Arakelian, modified from Kamil K Wojcicki
-\documentclass[margin,line]{resume}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
 
-%______________________________________________________________________________________________________________________
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
-\name{\Large Daron Arakelian}
-\begin{resume}
 
-    %__________________________________________________________________________________________________________________
-    % Contact Information
-    \section{\myheadingstyle Personal\\Links}
-    E-mail: \href{mailto://daronarakelian@gmail.com}{daronarakelian@gmail.com} \hfill Phone: 508-330-0484\vspace{0mm}\\\vspace{0mm}%
-    GitHub: \url{https://github.com/darakelian} \hfill LinkedIn: \href{https://www.linkedin.com/in/daron-arakelian-943540194/}{daron-arakelian}\vspace{0mm}\\\vspace{-4.5mm}%
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-    \section{\myheadingstyle Skills} 
-    C++, C\#, Python, Java, TypeScript, Git, SQL, Bash, CMake, TeamCity, GitLab+Github CI/CD
-
-    \section{\myheadingstyle Profession Profile}
-    Experienced back-end developer with 7+ years of experience - focused on creating high-performance code. Passionate about financial technologies and markets, DevSecOps, and all things .NET. Served a 4-year ROTC commitment for the U.S. Air Force while simultaneously working part-time in a HFT firm. Holds a B.S. in Computer Engineering and most recently completed an AI Fellowship at MIT.
-  
-%__________________________________________________________________________________________________________________
-    % Professional Experience
-    \section{\myheadingstyle Professional\\Experience}
-    \textbf{DRW}, Chicago, IL \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Software Engineer - Commodities Engineering} \hfill \textbf{December 2024 -- September 2026}\\
-    - Led engineering efforts for \$XX MM AUM trading desk ensuring traders and analysts had access to robust analytics tools.\vspace{1mm}\\%
-    - Onboarded numerous 3rd-party data vendors through custom ETL pipelines using Python and kubernetes.\vspace{1mm}\\%
-    - Created scripts, processes, and standards for agentic developer workflows with Claude Code.\vspace{1mm}\\%
-    - Ensured portfolio manager had access to vital risk metrics via web UIs and Slack bots.\vspace{1mm}\\%
-    - Developed and maintained full-stack analytics platform in Java/TypeScript providing traders with tools to perform analysis with custom DSL for timeseries manipulation.\vspace{1mm}\\%
-    - Spun up Python analytics framework in kubernetes allowing analyst-provided Pandas/numpy code to run within main analytics platform.
-
-    \textbf{Susquehanna International Group}, Philadelphia, PA \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Software Engineer - Market Data, Options, Client Applications} \hfill \textbf{March 2018 -- December 2024}\\
-    - Developed high-performance real-time market data parsers in C++ for use in manual and automated trading strategies.\vspace{1mm}\\%
-    - Maintained Python and C\# implementations of market data parsers enabling ease of use for internal teams and quant researchers.\vspace{1mm}\\%
-    - Implemented custom SBE code generators outputting C\# to upgrade the firm's SBE parsers; on average, results in 300\% latency improvements.\vspace{1mm}\\%
-    - Designed packaging solutions for parser libraries using Conan2, Conda, and NuGet to distribute code across the firm.\vspace{1mm}\\%
-    - Led development of new full-stack C\# system for market data display access controls ensuring compliance with stock exchange policies.\vspace{1mm}\\%
-    - Developed software for real-time monitoring of market data feeds across 15+ co-located trading systems ensuring system integrity and availability.
-
-    \textbf{U.S. Air Force}, Fort George G. Meade (NSA), MD \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Software Engineer, Captain, TS/SCI cleared} \hfill \textbf{December 2020 -- October 2024}\\
-    - Led software development efforts on an inter-system communications library spanning multiple teams that was vital to a \$XB/yr national security mission.\vspace{1mm}\\%
-    - Bootstrapped a CI/CD pipeline providing code quality/security scans and consistent build efforts; responsible for championing DevSecOps process for a XX+ person team using GitLab CI/CD, k8s, and SonarQube.\vspace{1mm}\\%
-    - Developed a custom configuration management library for use across 10+ projects streamlining the process of runtime configuration for developers.\vspace{1mm}\\%
-    - Stood up a Java microservice to replace a legacy monorepo improving reliability and scalability using Docker, k8s, and SpringBoot.\vspace{1mm}\\%
-    - Developed custom automated cyber-vulnerability toolchain using ML/AI to bolster cyber research analysts' abilities to perform vital work helping to safeguard multi-billion dollar weapon systems.\vspace{1mm}\\%
-    - Served as AI SME for senior leadership, guiding strategic decision-making processes to operationalize AI safely and responsibly, and liaising with private sector industry partners to forge new relations.
- 
-    % Side Projects
-    \section{\myheadingstyle Side\\Projects}
-    \textbf{Resy CLI}, Rust \vspace{2mm}\\vspace{1mm}\\%
-    - Reverse engineered Resy HTTP API to understand restaurant searching and reservation discovery/bookings.\vspace{1mm}\\%
-    - Implemented Rust CLI using Clap/tokio to replicate Resy front-end functionality.\vspace{1mm}\\%
-    - Created a Rust library with core logic, allowing bindings for other languages.
-
-%__________________________________________________________________________________________________________________
-    % Education
-    \section{\myheadingstyle Education}
-
-    \textsl{B.S. in Computer Engineering}, Drexel University \hfill \textbf{ September 2015 -- June 2020}\\\vspace{-1mm}%
-    \textsl{Phantom Fellowship}, DAF-MIT AI Accelerator \hfill \textbf{ November 2022 -- April 2023 }\\\vspace{-2mm}%
+\begin{center}
+    \textbf{\Huge \scshape Daron Arakelian} \\ \vspace{1pt}
+    \small 508-330-0484 $|$ \href{mailto:daronarakelian@gmail.com.com}{\underline{daronarakelian@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/daron-arakelian}{\underline{linkedin.com/in/daron-arakelian}} $|$
+    \href{https://github.com/darakelian}{\underline{github.com/darakelian}}
+\end{center}
 
 
-%__________________________________________________________________________________________________________________
-    % Honors and Awards
-    %\section{\myheadingstyle Awards}
-    %Joint Achievement Medal, U.S. Air Force, 2024
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Drexel University}{Philadelphia, PA}
+      {Bachelor of Science, Computer Engineering}{August 2015 -- June 2020}
+    \resumeSubheading
+      {DAF-MIT AI Accelerator}{Cambridge, MA}
+      {Phantom Fellowship}{November 2022 – April 2023}
+  \resumeSubHeadingListEnd
 
-%__________________________________________________________________________________________________________________
-    % Interests
-%    \section{\myheadingstyle Interests} 
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{December 2024 -- September 2026}
+      {DRW}{Chicago, IL}
+      \resumeItemListStart
+        \resumeItem{Led engineering efforts for \$XX MM AUM trading desk ensuring traders and analysts had access to robust analytics tools}
+        \resumeItem{Onboarded numerous 3rd-party data vendors through custom ETL pipelines using Python and kubernetes}
+        \resumeItem{Created scripts, processes, and standards for agentic developer workflows with Claude Code}
+        \resumeItem{Ensured portfolio manager had access to vital risk metrics via web UIs and Slack bots}
+        \resumeItem{Developed and maintained full-stack analytics platform in Java/TypeScript providing traders with tools to perform analysis with custom DSL for timeseries manipulation}
+        \resumeItem{Spun up Python analytics framework in kubernetes allowing analyst-provided Pandas/numpy code to run within main analytics platform}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Engineer}{March 2018 -- December 2024}
+      {Susquehanna International Group}{Philadelphia, PA}
+      \resumeItemListStart
+        \resumeItem{Developed high-performance real-tie market data parsers in C++ for use in manual and automated trading strategies}
+        \resumeItem{Maintained Python and C\# implementations of market data parsers enabling ease of use for internal teams and quant researchers}
+        \resumeItem{Implemented custom SBE code generators outputting C\# to upgrade the firm's SBE parsers; on average, results in 300\% latency improvements}
+        \resumeItem{Designed packaging solutions for parser libraries using Conan2, Conda, and NuGet to distribute code across the firm}
+        \resumeItem{Led development of new full-stack C\# system for market data display access controls ensuring compliance with stock exchange policies}
+        \resumeItem{Developed software for real-time monitoring of market data feeds across 15+ co-located trading systems ensuring system integrity and availability}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer, Captain, TS/SCI cleared}{December 2020 -- December 2024}
+      {U.S. Air Force}{fort George G. Meade (NSA), MD}
+      \resumeItemListStart
+        \resumeItem{Led software development efforts on an inter-system communications library spanning multiple teams that was vital to a \$XB/yr national security mission}
+        \resumeItem{Bootstrapped a CI/CD pipeline providing code quality/security scans and consistent build efforts; responsible for championing DevSecOps process for a XX+ person team using GitLab CI/CD, k8s, and SonarQube}
+        \resumeItem{Developed a custom configuration management library for use across 10+ projects streamlining the process of runtime configuration for developers}
+        \resumeItem{Stood up a Java microservice to replace a legacy monorepo improving reliability and scalability using Docker, k8s, and SpringBoot}
+        \resumeItem{Developed custom automated cyber-vulnerability toolchain using ML/AI to bolster cyber research analysts' abilities to perform vital work helping to safeguard multi-billion dollar weapon systems}
+        \resumeItem{Served as AI SME for senior leadership, guiding strategic decision-making processes to operationalize AI safely and responsibly, and liaising with private sector industry partners to forge new relations}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 
-%computer science education, artificial intelligence, machine learning, computer graphics
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Resy CLI} $|$ \emph{Rust, tokio, Clap}}{October 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Reverse engineered Resy HTTP API to understand restaurant searching and reservation discovery/bookings}
+            \resumeItem{Replicated Resy's front-end behavior as Rust CLI allowing programmatic access to Resy}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-%______________________________________________________________________________________________________________________
 
-\end{resume}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, Python, C++, Java, TypeScript, SQL, Bash} \\
+     \textbf{Frameworks}{: React, FastAPI} \\
+     \textbf{Developer Tools}{: Git, Docker, TeamCity, GitHub/GitLab CI/CD} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
-
-%______________________________________________________________________________________________________________________
-% EOF
