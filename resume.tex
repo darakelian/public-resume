@@ -40,11 +40,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.25in}
 
 \urlstyle{same}
 
@@ -119,6 +119,12 @@
 \end{center}
 
 
+%-----PROFRESSIONAL PROFILE-----
+\section{Profressional Profile}
+Experienced back-end developer with 6+ years of experience - focused on creating high-performance
+code. Passionate about financial technologies and markets, DevSecOps, and all things Python/.NET/C++. Served
+a 4-year ROTC commitment for the U.S. Air Force while simultaneously working part-time in a HFT
+firm. Holds a B.S. in Computer Engineering and most recently completed an AI Fellowship at MIT.
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -127,72 +133,81 @@
       {Bachelor of Science, Computer Engineering}{August 2015 -- June 2020}
     \resumeSubheading
       {DAF-MIT AI Accelerator}{Cambridge, MA}
-      {Phantom Fellowship}{November 2022 – April 2023}
+      {Phantom Fellowship}{November 2022 - April 2023}
   \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+    \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Software Engineer}{December 2024 -- September 2026}
-      {DRW}{Chicago, IL}
-      \resumeItemListStart
-        \resumeItem{Led engineering efforts for \$XX MM AUM trading desk ensuring traders and analysts had access to robust analytics tools}
-        \resumeItem{Onboarded numerous 3rd-party data vendors through custom ETL pipelines using Python and kubernetes}
-        \resumeItem{Created scripts, processes, and standards for agentic developer workflows with Claude Code}
-        \resumeItem{Ensured portfolio manager had access to vital risk metrics via web UIs and Slack bots}
-        \resumeItem{Developed and maintained full-stack analytics platform in Java/TypeScript providing traders with tools to perform analysis with custom DSL for timeseries manipulation}
-        \resumeItem{Spun up Python analytics framework in kubernetes allowing analyst-provided Pandas/numpy code to run within main analytics platform}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
+        \resumeSubheading
+            {Software Engineer}{December 2024 -- September 2026}
+            {DRW}{Chicago, IL}
+            \resumeItemListStart
+                \resumeItem{Led engineering efforts for \$XX MM AUM trading desk ensuring traders and analysts had access to robust analytics tools}
+                \resumeItem{Onboarded numerous 3rd-party data vendors through custom ETL pipelines using Python and kubernetes}
+                \resumeItem{Created scripts, processes, and standards for agentic developer workflows with Claude Code}
+                \resumeItem{Ensured portfolio manager had access to vital risk metrics via web UIs and Slack bots}
+                \resumeItem{Developed and maintained full-stack analytics platform in Java/TypeScript providing traders with tools to perform analysis with custom DSL for timeseries manipulation}
+                \resumeItem{Spun up Python analytics framework in k8s allowing analyst-provided Pandas/numpy code to run within main analytics platform}
+            \resumeItemListEnd
+        
+    % -----------Multiple Positions Heading-----------
+    %    \resumeSubSubheading
+    %     {Software Engineer I}{Oct 2014 - Sep 2016}
+    %     \resumeItemListStart
+    %        \resumeItem{Apache Beam}
+    %          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+    %     \resumeItemListEnd
+    %    \resumeSubHeadingListEnd
+    %-------------------------------------------
 
-    \resumeSubheading
-      {Software Engineer}{March 2018 -- December 2024}
-      {Susquehanna International Group}{Philadelphia, PA}
-      \resumeItemListStart
-        \resumeItem{Developed high-performance real-tie market data parsers in C++ for use in manual and automated trading strategies}
-        \resumeItem{Maintained Python and C\# implementations of market data parsers enabling ease of use for internal teams and quant researchers}
-        \resumeItem{Implemented custom SBE code generators outputting C\# to upgrade the firm's SBE parsers; on average, results in 300\% latency improvements}
-        \resumeItem{Designed packaging solutions for parser libraries using Conan2, Conda, and NuGet to distribute code across the firm}
-        \resumeItem{Led development of new full-stack C\# system for market data display access controls ensuring compliance with stock exchange policies}
-        \resumeItem{Developed software for real-time monitoring of market data feeds across 15+ co-located trading systems ensuring system integrity and availability}
-    \resumeItemListEnd
+        \resumeSubheading
+            {Software Engineer}{March 2018 -- December 2024}
+            {Susquehanna International Group}{Philadelphia, PA}
+            \resumeItemListStart
+                \resumeItem{Developed high-performance real-tie market data parsers in C++ for use in manual and automated trading strategies}
+                \resumeItem{Maintained Python and C\# implementations of market data parsers enabling ease of use for internal teams and quant researchers}
+                \resumeItem{Implemented custom SBE code generators outputting C\# to upgrade the firm's parsers; averaging 300\% latency improvements}
+                \resumeItem{Designed packaging solutions for parser libraries using Conan2, Conda, and NuGet to distribute code across the firm}
+                \resumeItem{Led development of new full-stack C\# system for market data display access controls ensuring compliance with stock exchanges}
+                \resumeItem{Developed software for real-time monitoring of market data feeds across 15+ co-located trading systems ensuring system integrity and availability}
+        \resumeItemListEnd
 
-    \resumeSubheading
-      {Software Engineer, Captain, TS/SCI cleared}{December 2020 -- December 2024}
-      {U.S. Air Force}{fort George G. Meade (NSA), MD}
-      \resumeItemListStart
-        \resumeItem{Led software development efforts on an inter-system communications library spanning multiple teams that was vital to a \$XB/yr national security mission}
-        \resumeItem{Bootstrapped a CI/CD pipeline providing code quality/security scans and consistent build efforts; responsible for championing DevSecOps process for a XX+ person team using GitLab CI/CD, k8s, and SonarQube}
-        \resumeItem{Developed a custom configuration management library for use across 10+ projects streamlining the process of runtime configuration for developers}
-        \resumeItem{Stood up a Java microservice to replace a legacy monorepo improving reliability and scalability using Docker, k8s, and SpringBoot}
-        \resumeItem{Developed custom automated cyber-vulnerability toolchain using ML/AI to bolster cyber research analysts' abilities to perform vital work helping to safeguard multi-billion dollar weapon systems}
-        \resumeItem{Served as AI SME for senior leadership, guiding strategic decision-making processes to operationalize AI safely and responsibly, and liaising with private sector industry partners to forge new relations}
-      \resumeItemListEnd
+        \resumeSubheading
+            {Software Engineer, Captain, TS/SCI cleared}{December 2020 -- December 2024}
+            {U.S. Air Force}{fort George G. Meade (NSA), MD}
+            \resumeItemListStart
+                \resumeItem{Led software development efforts on an inter-system communications library spanning multiple teams that was vital to a \$XB/yr national security mission}
+                \resumeItem{Bootstrapped a CI/CD pipeline providing code quality/security scans and consistent build efforts; responsible for championing DevSecOps process for a XX+ person team using GitLab CI/CD, k8s, and SonarQube}
+                \resumeItem{Developed a custom configuration management library for use across 10+ projects streamlining the process for developers}
+                \resumeItem{Stood up a Java microservice to replace a legacy monorepo improving reliability and scalability using k8s and SpringBoot}
+                \resumeItem{Developed custom automated cyber-vulnerability toolchain using ML/AI to bolster cyber research analysts' abilities to perform vital work helping to safeguard multi-billion dollar weapon systems}
+                \resumeItem{Served as AI SME for senior leadership, guiding strategic decision-making processes to operationalize AI safely and responsibly, and liaising with private sector industry partners to forge new relations}
+            \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Resy CLI} $|$ \emph{Rust, tokio, Clap}}{October 2024 -- Present}
-          \resumeItemListStart
-            \resumeItem{Reverse engineered Resy HTTP API to understand restaurant searching and reservation discovery/bookings}
-            \resumeItem{Replicated Resy's front-end behavior as Rust CLI allowing programmatic access to Resy}
-          \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Resy CLI} $|$ \emph{Rust, tokio, Clap}}{October 2024 -- Present}
+            \resumeItemListStart
+                \resumeItem{Reverse engineered Resy HTTP API to understand restaurant searching and reservation discovery/bookings}
+                \resumeItem{Replicated Resy's front-end behavior as Rust CLI allowing programmatic access to Resy}
+                \resumeItem{Created library with pertinent code allowing for bindings in other languages}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{MTG Tournament Hoster} $|$ \emph{Python, FastAPI, TypeScript, React, Docker}}{September 2026 -- Present}
+            \resumeItemListStart
+                \resumeItem{Replacement for official WOTC provided software, supporting up to multi-day scale tournaments}
+                \resumeItem{Implements official tournament pairing rules}
+                \resumeItem{Role-based authentication layer ensures integrity of tournament operations}
+                \resumeItem{Properly accounts for tie-breakers in all situations, unlike other solutions, ensuring strong performance is properly rewarded}
+            \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
@@ -200,13 +215,13 @@
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C\#, Python, C++, Java, TypeScript, SQL, Bash} \\
-     \textbf{Frameworks}{: React, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TeamCity, GitHub/GitLab CI/CD} \\
-    }}
- \end{itemize}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+            \textbf{Languages}{: C\#, Python, C++, Java, TypeScript, SQL, Bash} \\
+            \textbf{Frameworks}{: React, FastAPI} \\
+            \textbf{Developer Tools}{: Git, Docker, TeamCity, GitHub/GitLab CI/CD} \\
+        }}
+    \end{itemize}
 
 
 %-------------------------------------------
